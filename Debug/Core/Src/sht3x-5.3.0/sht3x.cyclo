@@ -1,0 +1,16 @@
+sht3x.c:77:9:sht3x_measure_blocking_read	2
+sht3x.c:89:9:sht3x_measure	1
+sht3x.c:93:9:sht3x_read	1
+sht3x.c:109:9:sht3x_probe	1
+sht3x.c:115:9:sht3x_get_status	1
+sht3x.c:120:9:sht3x_clear_status	1
+sht3x.c:124:6:sht3x_enable_low_power_mode	2
+sht3x.c:129:6:sht3x_set_power_mode	5
+sht3x.c:151:9:sht3x_read_serial	2
+sht3x.c:167:13:sht3x_get_driver_version	1
+sht3x.c:171:9:sht3x_set_alert_thd	5
+sht3x.c:213:9:sht3x_get_alert_thd	5
+sht3x.c:257:6:tick_to_temperature	1
+sht3x.c:261:6:tick_to_humidity	1
+sht3x.c:265:6:temperature_to_tick	1
+sht3x.c:269:6:humidity_to_tick	1

@@ -1,0 +1,6 @@
+sensirion_hw_i2c_implementation.c:54:9:sensirion_i2c_select_bus	1
+sensirion_hw_i2c_implementation.c:63:6:sensirion_i2c_init	1
+sensirion_hw_i2c_implementation.c:70:6:sensirion_i2c_release	1
+sensirion_hw_i2c_implementation.c:84:19:sensirion_i2c_read	1
+sensirion_hw_i2c_implementation.c:103:19:sensirion_i2c_write	1
+sensirion_hw_i2c_implementation.c:121:6:sensirion_sleep_usec	1
