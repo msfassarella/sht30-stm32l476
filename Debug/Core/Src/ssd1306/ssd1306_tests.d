@@ -1,4 +1,5 @@
-Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
+Core/Src/ssd1306/ssd1306_tests.o: ../Core/Src/ssd1306/ssd1306_tests.c \
+ ../Core/Src/ssd1306/ssd1306.h ../Core/Src/ssd1306/ssd1306_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -29,15 +30,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
- C:/Users/55279/Documents/Inventus/projetos/Nucleo\ Board/Nucleo-L476RG/prj1_sht30/Core/Src/sht3x-5.3.0/sht3x.h \
- C:/Users/55279/Documents/Inventus/projetos/Nucleo\ Board/Nucleo-L476RG/prj1_sht30/Core/Src/sht3x-5.3.0/sensirion_arch_config.h \
- C:/Users/55279/Documents/Inventus/projetos/Nucleo\ Board/Nucleo-L476RG/prj1_sht30/Core/Src/sht3x-5.3.0/sensirion_i2c.h \
- C:/Users/55279/Documents/Inventus/projetos/Nucleo\ Board/Nucleo-L476RG/prj1_sht30/Core/Src/sht3x-5.3.0/sht_git_version.h \
- C:/Users/55279/Documents/Inventus/projetos/Nucleo\ Board/Nucleo-L476RG/prj1_sht30/Core/Src/ssd1306/ssd1306.h \
- C:/Users/55279/Documents/Inventus/projetos/Nucleo\ Board/Nucleo-L476RG/prj1_sht30/Core/Src/ssd1306/ssd1306_conf.h \
- C:/Users/55279/Documents/Inventus/projetos/Nucleo\ Board/Nucleo-L476RG/prj1_sht30/Core/Src/ssd1306/ssd1306_fonts.h \
- C:/Users/55279/Documents/Inventus/projetos/Nucleo\ Board/Nucleo-L476RG/prj1_sht30/Core/Src/ssd1306/ssd1306_tests.h
-../Core/Inc/main.h:
+ ../Core/Src/ssd1306/ssd1306_fonts.h ../Core/Src/ssd1306/ssd1306_tests.h
+../Core/Src/ssd1306/ssd1306.h:
+../Core/Src/ssd1306/ssd1306_conf.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:
@@ -68,11 +63,5 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
-C:/Users/55279/Documents/Inventus/projetos/Nucleo\ Board/Nucleo-L476RG/prj1_sht30/Core/Src/sht3x-5.3.0/sht3x.h:
-C:/Users/55279/Documents/Inventus/projetos/Nucleo\ Board/Nucleo-L476RG/prj1_sht30/Core/Src/sht3x-5.3.0/sensirion_arch_config.h:
-C:/Users/55279/Documents/Inventus/projetos/Nucleo\ Board/Nucleo-L476RG/prj1_sht30/Core/Src/sht3x-5.3.0/sensirion_i2c.h:
-C:/Users/55279/Documents/Inventus/projetos/Nucleo\ Board/Nucleo-L476RG/prj1_sht30/Core/Src/sht3x-5.3.0/sht_git_version.h:
-C:/Users/55279/Documents/Inventus/projetos/Nucleo\ Board/Nucleo-L476RG/prj1_sht30/Core/Src/ssd1306/ssd1306.h:
-C:/Users/55279/Documents/Inventus/projetos/Nucleo\ Board/Nucleo-L476RG/prj1_sht30/Core/Src/ssd1306/ssd1306_conf.h:
-C:/Users/55279/Documents/Inventus/projetos/Nucleo\ Board/Nucleo-L476RG/prj1_sht30/Core/Src/ssd1306/ssd1306_fonts.h:
-C:/Users/55279/Documents/Inventus/projetos/Nucleo\ Board/Nucleo-L476RG/prj1_sht30/Core/Src/ssd1306/ssd1306_tests.h:
+../Core/Src/ssd1306/ssd1306_fonts.h:
+../Core/Src/ssd1306/ssd1306_tests.h:

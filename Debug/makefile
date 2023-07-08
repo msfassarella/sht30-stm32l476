@@ -11,6 +11,7 @@ RM := rm -rf
 -include sources.mk
 -include Drivers/STM32L4xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
+-include Core/Src/ssd1306/subdir.mk
 -include Core/Src/sht3x-5.3.0/hw_i2c/subdir.mk
 -include Core/Src/sht3x-5.3.0/subdir.mk
 -include Core/Src/subdir.mk

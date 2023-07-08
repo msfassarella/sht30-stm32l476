@@ -25,6 +25,7 @@ SUBDIRS := \
 Core/Src \
 Core/Src/sht3x-5.3.0/hw_i2c \
 Core/Src/sht3x-5.3.0 \
+Core/Src/ssd1306 \
 Core/Startup \
 Drivers/STM32L4xx_HAL_Driver/Src \
 

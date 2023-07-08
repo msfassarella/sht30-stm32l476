@@ -22,6 +22,9 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "sht3x.h"
+#include "ssd1306.h"
+#include "ssd1306_tests.h"
+#include <stdbool.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -125,11 +128,13 @@ int main(void)
 		 HAL_Delay(100);
 		 //probe_ret = sht3x_get_status(&hi2c1, SHT3X_I2C_ADDR_DFLT, &status_reg );
 //		 printf("probe_ret %04X, %04X\n", probe_ret, status_reg);
-		 probe_ret = sht3x_measure(&hi2c1, SHT3X_I2C_ADDR_DFLT << 1);
+		 //probe_ret = sht3x_measure(&hi2c1, SHT3X_I2C_ADDR_DFLT << 1);
 		 HAL_Delay(100);
 		 int32_t temp, umidade;
-		 probe_ret = sht3x_read(&hi2c1, SHT3X_I2C_ADDR_DFLT << 1, &temp, &umidade );
+		 //probe_ret = sht3x_read(&hi2c1, SHT3X_I2C_ADDR_DFLT << 1, &temp, &umidade );
 	     printf("probe_ret %04X, %d, %d\n", probe_ret, temp, umidade);
+
+	     ssd1306_TestAll();
 	  }
     /* USER CODE END WHILE */
 
