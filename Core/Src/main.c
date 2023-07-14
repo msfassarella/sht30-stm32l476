@@ -53,7 +53,7 @@ DMA_HandleTypeDef hdma_usart2_rx;
 DMA_HandleTypeDef hdma_usart2_tx;
 
 /* USER CODE BEGIN PV */
-
+uint8_t flag_update_leitura = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -66,6 +66,7 @@ static void MX_I2C2_Init(void);
 static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
 static bool button_press_action(void);
+void update_leitura(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -118,8 +119,11 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   bool pressed = false;
-  int16_t probe_ret;
+  //int16_t probe_ret;
   uint16_t status_reg;
+
+  ssd1306_Init();
+  ssd1306_Fill(Black);
   HAL_TIM_Base_Start_IT(&htim2);
   while (1)
   {
@@ -128,13 +132,28 @@ int main(void)
 		 HAL_Delay(100);
 		 //probe_ret = sht3x_get_status(&hi2c1, SHT3X_I2C_ADDR_DFLT, &status_reg );
 //		 printf("probe_ret %04X, %04X\n", probe_ret, status_reg);
-		 //probe_ret = sht3x_measure(&hi2c1, SHT3X_I2C_ADDR_DFLT << 1);
-		 HAL_Delay(100);
-		 int32_t temp, umidade;
-		 //probe_ret = sht3x_read(&hi2c1, SHT3X_I2C_ADDR_DFLT << 1, &temp, &umidade );
-	     printf("probe_ret %04X, %d, %d\n", probe_ret, temp, umidade);
 
-	     ssd1306_TestAll();
+		 //probe_ret = sht3x_measure(&hi2c1, SHT3X_I2C_ADDR_DFLT << 1);
+		 //HAL_Delay(100);
+		 //int32_t temp, umidade;
+		 //probe_ret = sht3x_read(&hi2c1, SHT3X_I2C_ADDR_DFLT << 1, &temp, &umidade );
+	     //printf("probe_ret %04X, %d, %d\n", probe_ret, temp, umidade);
+
+	     //ssd1306_SetCursor(2, 2);
+	     //ssd1306_write_i32(temp,3);
+	     //ssd1306_WriteChar('C', Font_7x10, White);
+	     //ssd1306_SetCursor(2, 20);
+	     //ssd1306_write_i32(umidade,3);
+	     //ssd1306_WriteChar('%', Font_7x10, White);
+	     //ssd1306_UpdateScreen();
+
+	     update_leitura();
+	  }
+
+	  if (flag_update_leitura == 1){
+		  update_leitura();
+		  flag_update_leitura = 0;
+
 	  }
     /* USER CODE END WHILE */
 
@@ -444,7 +463,29 @@ bool button_press_action(void)
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 {
     HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
+    if (flag_update_leitura == 0)
+       flag_update_leitura = 1;
 }
+
+
+void update_leitura(void){
+	 int16_t probe_ret;
+
+	 probe_ret = sht3x_measure(&hi2c1, SHT3X_I2C_ADDR_DFLT << 1);
+	 HAL_Delay(100);
+	 int32_t temp, umidade;
+	 probe_ret = sht3x_read(&hi2c1, SHT3X_I2C_ADDR_DFLT << 1, &temp, &umidade );
+    printf("probe_ret %04X, %d, %d\n", probe_ret, temp, umidade);
+
+    ssd1306_SetCursor(2, 2);
+    ssd1306_write_i32(temp,3);
+    ssd1306_WriteChar('C', Font_7x10, White);
+    ssd1306_SetCursor(2, 20);
+    ssd1306_write_i32(umidade,3);
+    ssd1306_WriteChar('%', Font_7x10, White);
+    ssd1306_UpdateScreen();
+}
+
 /* USER CODE END 4 */
 
 /**

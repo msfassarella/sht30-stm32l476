@@ -7,17 +7,20 @@
 C_SRCS += \
 ../Core/Src/ssd1306/ssd1306.c \
 ../Core/Src/ssd1306/ssd1306_fonts.c \
-../Core/Src/ssd1306/ssd1306_tests.c 
+../Core/Src/ssd1306/ssd1306_tests.c \
+../Core/Src/ssd1306/ssd1306_util.c 
 
 OBJS += \
 ./Core/Src/ssd1306/ssd1306.o \
 ./Core/Src/ssd1306/ssd1306_fonts.o \
-./Core/Src/ssd1306/ssd1306_tests.o 
+./Core/Src/ssd1306/ssd1306_tests.o \
+./Core/Src/ssd1306/ssd1306_util.o 
 
 C_DEPS += \
 ./Core/Src/ssd1306/ssd1306.d \
 ./Core/Src/ssd1306/ssd1306_fonts.d \
-./Core/Src/ssd1306/ssd1306_tests.d 
+./Core/Src/ssd1306/ssd1306_tests.d \
+./Core/Src/ssd1306/ssd1306_util.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -27,7 +30,7 @@ Core/Src/ssd1306/%.o Core/Src/ssd1306/%.su Core/Src/ssd1306/%.cyclo: ../Core/Src
 clean: clean-Core-2f-Src-2f-ssd1306
 
 clean-Core-2f-Src-2f-ssd1306:
-	-$(RM) ./Core/Src/ssd1306/ssd1306.cyclo ./Core/Src/ssd1306/ssd1306.d ./Core/Src/ssd1306/ssd1306.o ./Core/Src/ssd1306/ssd1306.su ./Core/Src/ssd1306/ssd1306_fonts.cyclo ./Core/Src/ssd1306/ssd1306_fonts.d ./Core/Src/ssd1306/ssd1306_fonts.o ./Core/Src/ssd1306/ssd1306_fonts.su ./Core/Src/ssd1306/ssd1306_tests.cyclo ./Core/Src/ssd1306/ssd1306_tests.d ./Core/Src/ssd1306/ssd1306_tests.o ./Core/Src/ssd1306/ssd1306_tests.su
+	-$(RM) ./Core/Src/ssd1306/ssd1306.cyclo ./Core/Src/ssd1306/ssd1306.d ./Core/Src/ssd1306/ssd1306.o ./Core/Src/ssd1306/ssd1306.su ./Core/Src/ssd1306/ssd1306_fonts.cyclo ./Core/Src/ssd1306/ssd1306_fonts.d ./Core/Src/ssd1306/ssd1306_fonts.o ./Core/Src/ssd1306/ssd1306_fonts.su ./Core/Src/ssd1306/ssd1306_tests.cyclo ./Core/Src/ssd1306/ssd1306_tests.d ./Core/Src/ssd1306/ssd1306_tests.o ./Core/Src/ssd1306/ssd1306_tests.su ./Core/Src/ssd1306/ssd1306_util.cyclo ./Core/Src/ssd1306/ssd1306_util.d ./Core/Src/ssd1306/ssd1306_util.o ./Core/Src/ssd1306/ssd1306_util.su
 
 .PHONY: clean-Core-2f-Src-2f-ssd1306
 

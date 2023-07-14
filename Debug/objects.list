@@ -11,6 +11,7 @@
 "./Core/Src/ssd1306/ssd1306.o"
 "./Core/Src/ssd1306/ssd1306_fonts.o"
 "./Core/Src/ssd1306/ssd1306_tests.o"
+"./Core/Src/ssd1306/ssd1306_util.o"
 "./Core/Startup/startup_stm32l476rgtx.o"
 "./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o"
 "./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o"
